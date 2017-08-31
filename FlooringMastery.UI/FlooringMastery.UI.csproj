@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5AB72A47-A945-476B-89A6-D5D46353B0BB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FlooringMastery.UI</RootNamespace>
+    <AssemblyName>FlooringMastery.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DIContainer.cs" />
+    <Compile Include="FileWatcher.cs" />
+    <Compile Include="Input\GetArea.cs" />
+    <Compile Include="Input\GetCustomerName.cs" />
+    <Compile Include="Input\GetOkayToContinue.cs" />
+    <Compile Include="Input\GetOrderDate.cs" />
+    <Compile Include="Input\GetOrderNumber.cs" />
+    <Compile Include="Input\GetProductType.cs" />
+    <Compile Include="Input\GetState.cs" />
+    <Compile Include="Menus\Menu.cs" />
+    <Compile Include="Menus\OrderMenu.cs" />
+    <Compile Include="Menus\ProductMenu.cs" />
+    <Compile Include="Menus\TaxMenu.cs" />
+    <Compile Include="Output\SendToConsole.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflows\OrderListWorkflow.cs" />
+    <Compile Include="Workflows\OrderLookupWorkflow.cs" />
+    <Compile Include="Workflows\OrderAddWorkflow.cs" />
+    <Compile Include="Workflows\OrderEditWorkflow.cs" />
+    <Compile Include="Workflows\OrderRemovalWorkflow.cs" />
+    <Compile Include="Workflows\ProductAddWorkflow.cs" />
+    <Compile Include="Workflows\ProductEditWorkflow.cs" />
+    <Compile Include="Workflows\ProductListWorkflow.cs" />
+    <Compile Include="Workflows\ProductRemoveWorkflow.cs" />
+    <Compile Include="Workflows\TaxAddWorkflow.cs" />
+    <Compile Include="Workflows\TaxEditWorkflow.cs" />
+    <Compile Include="Workflows\TaxListWorkflow.cs" />
+    <Compile Include="Workflows\TaxRemoveWorkflow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlooringMastery.BLL\FlooringMastery.BLL.csproj">
+      <Project>{96f0a8a6-af5e-42ee-9567-0e150772b6f9}</Project>
+      <Name>FlooringMastery.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlooringMastery.Data\FlooringMastery.Data.csproj">
+      <Project>{1676B58F-12D4-4164-A92B-459B2F3FAC72}</Project>
+      <Name>FlooringMastery.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlooringMastery.Models\FlooringMastery.Models.csproj">
+      <Project>{d3afa61f-6cab-49a8-9c9e-9280f191f7f8}</Project>
+      <Name>FlooringMastery.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

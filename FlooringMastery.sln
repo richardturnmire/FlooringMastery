@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26510.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlooringMastery.UI", "FlooringMastery.UI\FlooringMastery.UI.csproj", "{5AB72A47-A945-476B-89A6-D5D46353B0BB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8} = {D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8}
+		{96F0A8A6-AF5E-42EE-9567-0E150772B6F9} = {96F0A8A6-AF5E-42EE-9567-0E150772B6F9}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlooringMastery.BLL", "FlooringMastery.BLL\FlooringMastery.BLL.csproj", "{96F0A8A6-AF5E-42EE-9567-0E150772B6F9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8} = {D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8}
+		{1676B58F-12D4-4164-A92B-459B2F3FAC72} = {1676B58F-12D4-4164-A92B-459B2F3FAC72}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlooringMastery.Data", "FlooringMastery.Data\FlooringMastery.Data.csproj", "{1676B58F-12D4-4164-A92B-459B2F3FAC72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlooringMastery.Models", "FlooringMastery.Models\FlooringMastery.Models.csproj", "{D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlooringMastery.Tests", "FlooringMastery.Tests\FlooringMastery.Tests.csproj", "{E97DB7CE-CE75-4437-8056-01F487DF2815}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8} = {D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8}
+		{1676B58F-12D4-4164-A92B-459B2F3FAC72} = {1676B58F-12D4-4164-A92B-459B2F3FAC72}
+		{96F0A8A6-AF5E-42EE-9567-0E150772B6F9} = {96F0A8A6-AF5E-42EE-9567-0E150772B6F9}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AB72A47-A945-476B-89A6-D5D46353B0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB72A47-A945-476B-89A6-D5D46353B0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB72A47-A945-476B-89A6-D5D46353B0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB72A47-A945-476B-89A6-D5D46353B0BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F0A8A6-AF5E-42EE-9567-0E150772B6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F0A8A6-AF5E-42EE-9567-0E150772B6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F0A8A6-AF5E-42EE-9567-0E150772B6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F0A8A6-AF5E-42EE-9567-0E150772B6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1676B58F-12D4-4164-A92B-459B2F3FAC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1676B58F-12D4-4164-A92B-459B2F3FAC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1676B58F-12D4-4164-A92B-459B2F3FAC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1676B58F-12D4-4164-A92B-459B2F3FAC72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3AFA61F-6CAB-49A8-9C9E-9280F191F7F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97DB7CE-CE75-4437-8056-01F487DF2815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97DB7CE-CE75-4437-8056-01F487DF2815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97DB7CE-CE75-4437-8056-01F487DF2815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97DB7CE-CE75-4437-8056-01F487DF2815}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
